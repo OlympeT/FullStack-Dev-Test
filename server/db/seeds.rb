@@ -6,4 +6,4 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Panel.create([{panel_id: 'ASDVE4', panel_type: 'photovoltaic'},{panel_id: 'SDFREH', panel_type: 'hybrid'}])
+Panel.create([{panel_code: 'ASDVE4', panel_type: 'photovoltaic'},{panel_code: 'SDFREH', panel_type: 'hybrid'}])

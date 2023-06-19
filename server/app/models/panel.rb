@@ -6,7 +6,7 @@ class Panel < ApplicationRecord
   private
 
   def validate_panel_id_length
-    errors.add(:panel_id, "must be exactly 6 characters") if panel_id.length != 6
+    errors.add(:panel_code, "must be exactly 6 characters") if panel_id.length != 6
   end
 
 end
