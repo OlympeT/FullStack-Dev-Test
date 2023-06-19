@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  company_name: MyString
+  company_siren: MyString
+  customer_name: MyString
+  customer_email: MyString
+  customer_telephone: MyString
+  installation_address: MyString
+  installation_date: 2023-06-19
+  number_of_panels: 1
+  panel: one
+
+two:
+  company_name: MyString
+  company_siren: MyString
+  customer_name: MyString
+  customer_email: MyString
+  customer_telephone: MyString
+  installation_address: MyString
+  installation_date: 2023-06-19
+  number_of_panels: 1
+  panel: two

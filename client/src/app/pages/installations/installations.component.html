@@ -1,0 +1,42 @@
+<p class="text-center pt-2">
+  <img src="/assets/logo.png" alt="logo" />
+ </p>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-9 col-12 mx-auto">
+      <a [routerLink]="['/installations/new']" routerLinkActive="/installations/new"  type="button" class="btn btn-success mt-2 mb-2">New installation</a>
+      <div class="table-responsive">
+        <table class="table table-hover table-bordered table-striped">
+          <thead>
+            <tr>
+              <th>Company Name</th>
+              <th>Company SIREN</th>
+              <th>Customer Name</th>
+              <th>Customer Email</th>
+              <th>Customer Telephone</th>
+              <th>Installation Address</th>
+              <th>Installation Date</th>
+              <th>Number of Panels</th>
+              <th>Panel</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let installation of installation">
+              <td>{{ installation.company_name }}</td>
+              <td>{{ installation.company_siren }}</td>
+              <td>{{ installation.customer_name }}</td>
+              <td>{{ installation.customer_email }}</td>
+              <td>{{ installation.customer_telephone }}</td>
+              <td>{{ installation.installation_address }}</td>
+              <td>{{ installation.installation_date | date }}</td>
+              <td>{{ installation.number_of_panels }}</td>
+              <td>{{ _panelType(installation.panel_id) }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+   </div>
+</div>
+ 

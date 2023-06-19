@@ -1,0 +1,67 @@
+<p class="text-center pt-2">
+  <img src="/assets/logo.png" alt="logo" />
+ </p>
+ <div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6 col-12 mx-auto">
+      <form (ngSubmit)="submitForm()" #installationForm="ngForm" class="needs-validation">
+        <div class="mb-3">
+          <label for="company_name" class="form-label">Company Name</label>
+          <input type="text" id="company_name" name="company_name" class="form-control" [(ngModel)]="installation.company_name" required>
+        </div>
+      
+        <div class="mb-3">
+          <label for="company_siren" class="form-label">Company SIREN</label>
+          <input type="text" id="company_siren" name="company_siren" class="form-control" [(ngModel)]="installation.company_siren" required>
+        </div>
+      
+        <div class="mb-3">
+          <label for="customer_name" class="form-label">Customer Name</label>
+          <input type="text" id="customer_name" name="customer_name" class="form-control" [(ngModel)]="installation.customer_name" required>
+        </div>
+      
+        <div class="mb-3">
+          <label for="customer_email" class="form-label">Customer Email</label>
+          <input type="email" id="customer_email" name="customer_email" class="form-control" [(ngModel)]="installation.customer_email" required>
+        </div>
+      
+        <div class="mb-3">
+          <label for="customer_telephone" class="form-label">Customer Telephone</label>
+          <input type="tel" id="customer_telephone" name="customer_telephone" class="form-control" [(ngModel)]="installation.customer_telephone" required>
+        </div>
+      
+        <div class="mb-3">
+          <label for="installation_address" class="form-label">Installation Address</label>
+          <input type="text" id="installation_address" name="installation_address" class="form-control" [(ngModel)]="installation.installation_address" required>
+        </div>
+      
+        <div class="mb-3">
+          <label for="installation_date" class="form-label">Installation Date</label>
+          <input type="date" id="installation_date" name="installation_date" class="form-control" [(ngModel)]="installation.installation_date" required>
+        </div>
+      
+        <div class="mb-3">
+          <label for="number_of_panels" class="form-label">Number of Panels</label>
+          <input type="number" id="number_of_panels" name="number_of_panels" class="form-control" [(ngModel)]="installation.number_of_panels" required>
+        </div>
+      
+        <div class="mb-3">
+          <label for="panel_id" class="form-label">Panel ID</label>
+          <select name="panel_id" id="panel_id" class="form-control" [(ngModel)]="installation.panel_id" required>
+            <option *ngFor="let item of panel" 
+                [value]="item.id" 
+                >
+              {{item.panel_type}}
+            </option>
+          </select>
+        </div>
+      
+        <!-- Add more form fields as needed -->
+      
+        <button type="submit" class="btn btn-primary" [disabled]="!installationForm.valid">Submit</button>
+        <button [routerLink]="'/home'"  class="btn btn-danger ml-2" >Cancel</button>
+      </form>    
+    </div>
+   </div>
+ </div>
+ 

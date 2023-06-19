@@ -10,17 +10,40 @@ import {
 } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
+import { RouterModule, Routes } from '@angular/router';
+import { HomeComponent } from './pages/home/home.component';
+import { InstallationsModule } from './pages/installations/installations.module';
+import { ToastrModule } from 'ngx-toastr';
+
+const appRoutes: Routes = [
+  {
+    path: 'home',
+    component: HomeComponent
+  },
+  {
+    path: '',
+    redirectTo: 'home',
+    pathMatch: 'full'
+  },
+  {
+    path: '**',
+    redirectTo: 'home' // Error 404 - Page not found
+  }
+];
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    RouterModule.forRoot(appRoutes),
     NgbModule,
+    InstallationsModule,
   ],
   providers: [{ provide: NgbDateAdapter, useClass: NgbDateNativeUTCAdapter }],
   bootstrap: [AppComponent],
