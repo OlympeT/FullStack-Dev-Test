@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 2023_06_19_045458) do
   enable_extension "plpgsql"
 
   create_table "panels", force: :cascade do |t|
-    t.string "panel_id"
+    t.string "panel_code"
     t.string "panel_type"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

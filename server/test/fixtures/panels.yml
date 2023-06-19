@@ -1,9 +1,9 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  panel_id: MyString
+  panel_code: MyString
   panel_type: MyString
 
 two:
-  panel_id: MyString
+  panel_code: MyString
   panel_type: MyString

@@ -26,8 +26,8 @@ describe('NewInstallationComponent', () => {
 
     // Mock the getPanels method
     spyOn(installationsService, 'getPanels').and.returnValue(of([
-      { panel_id: 'ASDVE4', panel_type: 'photovoltaic', id:1 },
-      { panel_id: 'SDFREH', panel_type: 'hybrid',  id:2 }
+      { panel_code: 'ASDVE4', panel_type: 'photovoltaic', id:1 },
+      { panel_code: 'SDFREH', panel_type: 'hybrid',  id:2 }
     ]));
 
     fixture.detectChanges();
@@ -39,7 +39,7 @@ describe('NewInstallationComponent', () => {
 
   it('should initialize panels', () => {
     expect(component.panel.length).toBe(2);
-    expect(component.panel[0].panel_id).toBe('ASDVE4');
+    expect(component.panel[0].panel_code).toBe('ASDVE4');
     expect(component.panel[1].panel_type).toBe('hybrid');
   });
 

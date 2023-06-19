@@ -29,8 +29,8 @@ describe('InstallationsService', () => {
   describe('getPanels', () => {
     it('should retrieve panels', () => {
       const mockPanels: Panel[] = [
-        { panel_id: 'ASDVE4', panel_type: 'photovoltaic', id:1 },
-      { panel_id: 'SDFREH', panel_type: 'hybrid',  id:2 }
+        { panel_code: 'ASDVE4', panel_type: 'photovoltaic', id:1 },
+      { panel_code: 'SDFREH', panel_type: 'hybrid',  id:2 }
       ];
 
       service.getPanels().subscribe(panels => {

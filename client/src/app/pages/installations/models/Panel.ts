@@ -1,5 +1,5 @@
 export class Panel {
-    panel_id!: string;
+    panel_code!: string;
     panel_type!: string;
     id!: number;
 }
