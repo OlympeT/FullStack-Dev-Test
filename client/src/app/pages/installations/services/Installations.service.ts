@@ -28,8 +28,8 @@ getInstallations() {
 /**
    * Create a Installation
   */
-postInstallation(installation:Installation) {
-  return this._http.post(`${environment.apiBase}/system_installations`,{installation});
+postInstallation(system_installation:Installation) {
+  return this._http.post(`${environment.apiBase}/system_installations`,{system_installation});
 }
 
 }
